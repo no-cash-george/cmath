@@ -1,85 +1,111 @@
+# 🧮 Basic Math Library – by no_cash_george
 
-Basic math library created by no_cash_george
+This is a basic math library written in pure C, created mostly out of boredom 😄.  
+It currently provides a set of essential mathematical functions, mostly returning `float` values  
+(`double` support is planned in the future). The `factorial` function returns an `unsigned long long`.
 
+Error handling is done by returning specific values (e.g. `1` or `2`) that should be checked by the main program.
 
+Thanks for checking it out — have fun using it!
 
-This is my basic version of a math library in pure c (i am not a python dev of course)   
-that i created because i was bored. Bellow you can find basic information about its usage
-and the way it gives errors to the main programm. Currencty most of it returns floats    
-(i will change it to doubles in the future) exept of the factorial function that returns 
-an unsigned long long.                                                                   
-Thanks for your attention and i hope you have fun with it                                
+---
 
+## 📄 Function Documentation
 
+### `float int_pow(float base, int exponent)`
+- **Description:** Computes `base^exponent` using an integer exponent.
+- **Returns:** `float`
 
-DOCUMENTATION FOR EACH OF THE FUNCTIONS INCLUDED:
+---
 
+### `float pow(float base, float exponent)`
+- **Description:** Computes `base^exponent`.
+- **Returns:** `float`
+- **Error Handling:** Returns `1` if `base` is negative.
 
+---
 
-int_pow(integer power):                                                                              
-input  a floating point number as the base of the power, and an integer as the exponent of the power
-return  a float containing a^b                                                                      
+### `float E(float x)`
+- **Description:** Calculates `e^x`.
+- **Returns:** `float`
 
+---
 
-pow(power):                                             
-input  two floating point numbersv(a,b)                
-return  a float containing a^b                         
-error handling: The function detects if the given number
-for the base of the power is negative and returns 1               
+### `float sqrt(float x)`
+- **Description:** Calculates the square root of `x`.
+- **Returns:** `float`
+- **Error Handling:** Returns `1` if `x` is negative.
 
+---
 
-E(natural exponential function):               
-input  a floating point number                
-return  a floating point number containing e^x
+### `float root(int a, float x)`
+- **Description:** Calculates the `a`-th root of `x`.
+- **Returns:** `float`
+- **Error Handling:** Returns `1` if `x` is negative.
 
+---
 
-sqrt(square root):                                                  
-input  a floating point number                                      
-return  the square root of the floating point number               
-error handling: The function detects if the given number is negative
-and returns 1                                                      
+### `float ln(float x)`
+- **Description:** Computes the natural logarithm of `x`.
+- **Returns:** `float`
+- **Error Handling:** Returns `1` if `x` is negative.
 
+---
 
-root(square root):                                                  
-input  an integer (a) and a floating poing number                   
-return  the (a) root of the floating point number                  
-error handling: The function detects if the given number is negative
-and returns 1                                                      
+### `unsigned long long fact(int a)`
+- **Description:** Computes the factorial of `a` (`a!`).
+- **Returns:** `unsigned long long`
+- **Error Handling:** Returns `1` if `a` is negative.
 
+---
 
-ln(natural logarithm):                                              
-input  a floating point number (x)                                 
-return  the ln(x)                                                  
-error handling: The function detects if the given number is negative
-and returns 1                                                      
+### `float absolute(float x)`
+- **Description:** Returns the absolute value of `x`.
 
+---
 
-fact(factorial):                                                    
-input  an integer (a)                                              
-return  an unsigned long long containing a!                        
-error handling: The function detects if the given number is negative
-and returns 1                                                      
+### `int int_part(float x)`
+- **Description:** Returns the integer part of `x`.
 
+---
 
-absolute:                           
-input   a floating point number (x)
-return  absolute value of x        
+### `float sin(float x)`
+- **Description:** Calculates the sine of `x` (**input in radians**).
+- **Returns:** `float`
+- **Error Handling:** Returns `2` if `x` is negative.  
+  _(Degree-based version coming in the future.)_
 
+---
 
-int_part(the integer part of a floating point number):   
-input  a floating point number (x)                      
-return  the integer part of x                           
+### `float cos(float x)`
+- **Description:** Calculates the cosine of `x` (**input in radians**).
+- **Returns:** `float`
+- **Error Handling:** Returns `2` if `x` is negative.  
+  _(Degree-based version coming in the future.)_
 
+---
 
-sin(sine),cos(cosine):                                                                      
-input  a floating point number (x) IN RAD!!!!!(degree implementation comming in the future)
-output  the sine/cosine of x                                                               
-error handling: The function detects if the given number is negative                        
-and returns 2                                                                               
+### `float tan(float x)`
+- **Description:** Calculates the tangent of `x` (**input in radians**).
+- **Returns:** `float`
+- **Error Handling:** Returns `2` if `x` is negative.
 
+---
 
-tan(tangent),ctg(cotangent):                                                                
-input  a floating point number (x) IN RAD!!!!!(degree implementation comming in the future)
-output  the tangent/cotangent of x                                                         
-error handling: The function detects if the given number is negative                        
-and returns 2                                                                               
+### `float ctg(float x)`
+- **Description:** Calculates the cotangent of `x` (**input in radians**).
+- **Returns:** `float`
+- **Error Handling:** Returns `2` if `x` is negative.
+
+---
+
+## ✅ TODO / Future Improvements
+
+- Convert all floating-point operations to use `double` instead of `float` for greater precision.
+- Add support for trigonometric functions using degrees.
+- Implement proper error codes and structured error handling.
+- Add more advanced functions (e.g., log base n, hyperbolic functions, etc.)
+
+---
+
+**Made with 💻 and boredom by [no_cash_george](https://github.com/no-cash-george)**
