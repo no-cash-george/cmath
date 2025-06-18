@@ -108,4 +108,4 @@ Thanks for checking it out — have fun using it!
 
 ---
 
-**Made with 💻 and boredom by [no_cash_george](https://github.com/no-cash-george)**
+**Made with time and boredom by [no_cash_george](https://github.com/no-cash-george)**
